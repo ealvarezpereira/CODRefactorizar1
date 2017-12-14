@@ -4,39 +4,25 @@
  */
 package lovivido;
 
-import javax.swing.JOptionPane;
-
+/**
+ *
+ * @author quique
+ */
 public class LoVivido {
 
-public static void main(String[] args) {
-String n;
-String e;
+    /**
+     *
+     * @param args etc.
+     * 
+     * En el main simplemente se crea un objeto de tipo CalculoTiempoVida y llamamos a los metodos.
+     */
+    public static void main(String[] args) {
 
-int m;
-int d;
-int h;
-int a;
+        CalculoTiempoVida calc = new CalculoTiempoVida();
 
-n = JOptionPane.showInputDialog ("Escriba su nombre: ");
-e = JOptionPane.showInputDialog ("Escriba su edad: ");
- 
-a = Integer.parseInt (e);
- 
-m = (a*12);
-d = (a*365);
-h = (d*24);
- 
- JOptionPane.showMessageDialog(null,  "Meses: "  +m,"Numero de meses vividos de " +n,JOptionPane.INFORMATION_MESSAGE);
+        calc.recibirNomEd(calc.nombre,calc.edad);
+        calc.calcularTiempoVivido(calc.meses,calc.dias,calc.horas);
 
-
- JOptionPane.showMessageDialog(null, "Días: " +d,"Numero de días vividos de "+n,JOptionPane.INFORMATION_MESSAGE);
-
-
- JOptionPane.showMessageDialog(null, "Horas: " +h,"Numero de horas vividos de "+n,JOptionPane.INFORMATION_MESSAGE);
-
-   System.exit (0);
-
-}
-   
+    }
 
 }
